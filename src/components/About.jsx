@@ -10,10 +10,11 @@ const About = () => {
         {
             company: "Brandegix",
             role: "Stagiaire Développeuse Web",
-            date: "May 2025 – June 2025",
+            date: "2024",
             description: [
-                "Développement d'interfaces web utilisant des technologies modernes.",
-                "Collaboration avec l'équipe de développement pour intégrer de nouvelles fonctionnalités et optimiser les performances."
+                "Conception et développement de la plateforme de recherche d'emploi 'Casajobs.ma' (https://www.casajobs.ma/).",
+                "Stack technique : React.js pour le frontend, Python Flask pour le backend.",
+                "Mise en place de l'architecture et intégration des fonctionnalités principales."
             ]
         }
     ];
