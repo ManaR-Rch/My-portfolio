@@ -16,56 +16,78 @@ const BackgroundAnimation = () => {
         };
     }, []);
 
+    const webDevSymbols = [
+        "<html>", "<body>", "</div>", "npm i", "git push", 
+        "{ }", "();", "=>", "&&", "||", "return", 
+        "console.log", "import", "export", "const", "let", 
+        "try", "catch", "async", "await", "404", "200", 
+        "float", "grid", "flex", "#root"
+    ];
+
+    // Create a stable set of floating items
+    const [floatingItems] = useState(() => 
+        [...Array(30)].map((_, i) => ({
+            id: i,
+            text: webDevSymbols[Math.floor(Math.random() * webDevSymbols.length)],
+            x: Math.random() * 100,
+            y: Math.random() * 100,
+            scale: Math.random() * 0.5 + 0.8,
+            duration: Math.random() * 20 + 10,
+            delay: Math.random() * 5
+        }))
+    );
+
     return (
-        <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-slate-900">
-            {/* Interactive Mouse Gradient */}
+        <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-slate-950">
+            {/* Interactive Spotlight */}
             <div 
                 className="absolute inset-0 z-10 transition-opacity duration-300"
                 style={{
-                    background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(244, 114, 182, 0.07), transparent 40%)`
+                    background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(244, 114, 182, 0.06), transparent 40%)`
                 }}
             />
 
-            {/* Static Gradient Blobs for depth */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-pink-500/5 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
-
-            {/* Floating Particles */}
-            {[...Array(20)].map((_, i) => (
-                <motion.div
-                    key={i}
-                    className="absolute bg-pink-300 rounded-full"
+            {/* Binary / Code Stream Effect */}
+            {floatingItems.map((item) => (
+                <motion.span
+                    key={item.id}
+                    className="absolute font-mono text-pink-500 font-bold select-none pointer-events-none"
                     initial={{
-                        x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-                        y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000),
-                        opacity: Math.random() * 0.3 + 0.1,
-                        scale: Math.random() * 0.5 + 0.5,
+                        x: `${item.x}vw`,
+                        y: `${item.y}vh`,
+                        opacity: 0
                     }}
                     animate={{
-                        y: [null, Math.random() * -100],
-                        opacity: [null, Math.random() * 0.5 + 0.1, 0],
+                        y: [ `${item.y}vh`, `${item.y - 20}vh` ],
+                        opacity: [0, 0.15, 0] 
                     }}
                     transition={{
-                        duration: Math.random() * 10 + 10,
+                        duration: 10 + Math.random() * 10,
                         repeat: Infinity,
                         ease: "linear",
-                        delay: Math.random() * 5
+                        delay: Math.random() * 2
                     }}
                     style={{
-                        width: Math.random() * 3 + 1 + 'px',
-                        height: Math.random() * 3 + 1 + 'px',
+                         fontSize: `${item.scale}rem`,
                     }}
-                />
+                >
+                    {item.text}
+                </motion.span>
             ))}
 
-            {/* Grid Pattern Overlay */}
-            <div 
-                className="absolute inset-0 opacity-[0.03]" 
-                style={{
-                    backgroundImage: 'linear-gradient(#f472b6 1px, transparent 1px), linear-gradient(to right, #f472b6 1px, transparent 1px)',
-                    backgroundSize: '50px 50px'
-                }}
-            />
+            {/* Decorative Grid Lines */}
+            <svg className="absolute inset-0 w-full h-full opacity-[0.03] z-0">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f472b6" strokeWidth="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+
+            {/* Subtle Gradient Glows */}
+            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[100px]" />
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-pink-900/10 rounded-full blur-[100px]" />
         </div>
     );
 };
