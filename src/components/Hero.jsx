@@ -16,7 +16,7 @@ const Hero = () => {
                         Marchoube Manar.
                     </h2>
                     <h3 className="text-slate-400 font-bold text-4xl md:text-6xl mb-6">
-                        I build things for the web.
+                        I bring ideas to life on the web.
                     </h3>
                     <p className="text-slate-400 max-w-xl text-lg leading-relaxed mb-8">
                         I'm a Full Stack Developer based in Morocco, specializing in building
