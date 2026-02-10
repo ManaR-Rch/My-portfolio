@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import profileImg from '../assets/moi.png';
 
 const Hero = () => {
     return (
@@ -18,7 +19,7 @@ const Hero = () => {
                         I build things for the web.
                     </h3>
                     <p className="text-slate-400 max-w-xl text-lg leading-relaxed mb-8">
-                        I'm a Full Stack Developer based in Safi, Morocco, specializing in building
+                        I'm a Full Stack Developer based in Morocco, specializing in building
                         exceptional digital experiences. I work with technologies like 
                         <span className="text-pink-400"> React, Spring Boot, Laravel</span>, and more.
                     </p>
@@ -62,13 +63,8 @@ const Hero = () => {
                         <div className="absolute inset-0 border-2 border-pink-400 rounded transition-transform transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2"></div>
                         <div className="absolute inset-0 bg-pink-400/20 rounded mix-blend-overlay group-hover:bg-transparent transition-colors"></div>
                         
-                        {/* 
-                            PLACEHOLDER IMAGE 
-                            Replace 'src' with your actual photo path. 
-                            If using a local file, put it in /public folder and reference it like '/my-photo.jpg' 
-                        */}
                         <img 
-                            src="https://avatar.iran.liara.run/public/girl" 
+                            src={profileImg}
                             alt="Marchoube Manar" 
                             className="relative z-10 w-full h-full object-cover rounded shadow-lg filter grayscale hover:grayscale-0 transition-all duration-300"
                         />
