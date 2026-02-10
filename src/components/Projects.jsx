@@ -4,19 +4,26 @@ import { motion } from 'framer-motion';
 const Projects = () => {
     const projects = [
         {
-            title: "Delivery Optimizer",
-            description: "A logistics optimization system featuring a REST API for managing clients, warehouses, and deliveries. Includes data validation and an optimization algorithm (Callima) for efficient delivery routes.",
-            tech: ["Java", "Spring Boot", "JUnit", "JIRA", "Algorithm"],
-            github: "https://github.com/ManaR-Rch", 
+            title: "S-taffHub",
+            description: "Minimalist HR web application developed in Laravel, allowing centralized management of employees, leaves, unplanned absences, HR documents, and simplified payslips. Structured MVC architecture, respecting SOLID and DRY principles.",
+            tech: ["Laravel", "PostgreSQL", "Tailwind CSS", "MVC"],
+            github: "https://github.com/ManaR-Rch/S-taffHub",
             external: null,
         },
         {
-            title: "STAFFHUB",
-            description: "HR web application for managing employee and admin roles. Built with Laravel MVC architecture, featuring secure authentication and role-based access control.",
-            tech: ["Laravel", "PostgreSQL", "Tailwind CSS", "MVC"],
-            github: "https://github.com/ManaR-Rch",
+            title: "SmartShop",
+            description: "REST API Backend developed for MicroTech Morocco, a B2B IT hardware distributor. The application manages a portfolio of 650 active clients.",
+            tech: ["Java", "Spring Boot", "REST API"],
+            github: "https://github.com/ManaR-Rch/SmartShop",
             external: null,
         },
+        {
+            title: "Casajobs",
+            description: "Job search platform developed during an internship. Built with React and Python Flask.",
+            tech: ["React", "Python", "Flask"],
+            github: null,
+            external: "https://www.casajobs.ma/",
+        }
     ];
 
     return (
