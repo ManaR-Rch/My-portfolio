@@ -42,7 +42,7 @@ const Hero = () => {
                             GitHub
                         </a>
                         <a
-                            href="https://www.linkedin.com/in/marchoube-manar"
+                            href="https://www.linkedin.com/in/manar-marchoube-a955a9337/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-6 py-3 text-slate-300 hover:text-pink-400 transition-colors"
