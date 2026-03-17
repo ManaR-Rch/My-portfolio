@@ -7,7 +7,7 @@ const About = () => {
 
     const skills = [
         { category: "Backend", items: ["Java (Spring Boot)", "PHP (Laravel)", "Python (Flask)", "PostgreSQL", "MongoDB"] },
-        { category: "Frontend", items: ["React.js", "Tailwind CSS", "Javascript (ES6+)", "HTML/CSS"] },
+        { category: "Frontend", items: ["React.js", "Angular", "Tailwind CSS", "Javascript (ES6+)", "HTML/CSS"] },
         { category: "Tools & DevOps", items: ["Docker", "Git/Github", "JIRA", "CI/CD"] }
     ];
 
@@ -158,7 +158,7 @@ const About = () => {
                             </div>
                             <div className="p-4 font-mono text-sm text-slate-300">
                                 <p><span className="text-pink-400">➜</span> <span className="text-blue-400">~</span> whoami</p>
-                                <p className="ml-4 text-emerald-400">"Full Stack Developer based in Safi, Morocco"</p>
+                                <p className="ml-4 text-emerald-400">"Full Stack Developer based in Morocco"</p>
                                 <p className="mt-2"><span className="text-pink-400">➜</span> <span className="text-blue-400">~</span> git commit -m "Learning everyday"</p>
                                 <p className="ml-4 text-slate-500">[main 8a3c2] Learning everyday</p>
                             </div>

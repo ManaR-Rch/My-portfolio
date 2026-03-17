@@ -109,10 +109,8 @@ const Navbar = () => {
                     ))}
                     
                     <motion.a
-                        href="/resume.pdf"
+                        href="/Resume-Manar-Marchoube.pdf"
                         download="Resume_Manar_Marchoube.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
                         initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.5 }}
@@ -167,7 +165,7 @@ const Navbar = () => {
                                     </a>
                                 ))}
                                 <a
-                                    href="/resume.pdf"
+                                    href="/Resume-Manar-Marchoube.pdf"
                                     download="Resume_Manar_Marchoube.pdf"
                                     className="px-8 py-3 text-pink-400 border border-pink-400 rounded text-sm font-mono hover:bg-pink-400/10 transition-colors mt-8"
                                 >
